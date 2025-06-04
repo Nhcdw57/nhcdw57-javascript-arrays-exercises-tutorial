@@ -8,7 +8,10 @@ let people = [
 
 let simplifier = function(person) {
 	// Your code here
-	return person.name;
+	let today = new Date();
+	let ageInDays = (today - person.birthDate) / (1000 * 3600 * 24);
+	let age = Math.floor(ageInDays /365);
+	return `Hello, my name is ${person.name} and I am ${age} years old`;
 };
 
 console.log(people.map(simplifier));

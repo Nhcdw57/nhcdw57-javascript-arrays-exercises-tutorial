@@ -10,3 +10,4 @@ let tasks = [
 ];
 
 // Your code here
+console.log(tasks.filter(task=>task.done === true));
